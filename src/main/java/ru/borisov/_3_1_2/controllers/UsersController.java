@@ -7,7 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import ru.borisov._3_1_2.models.User;
-import ru.borisov._3_1_2.services.UserService;
+import ru.borisov._3_1_2.services.UserServiceImpl;
 
 
 @Qualifier("userService")
@@ -15,9 +15,9 @@ import ru.borisov._3_1_2.services.UserService;
 @RequestMapping("/users")
 public class UsersController {
 
-    private final UserService userService;
+    private final UserServiceImpl userService;
 
-    public UsersController(UserService userService) {
+    public UsersController(UserServiceImpl userService) {
         this.userService = userService;
     }
 
